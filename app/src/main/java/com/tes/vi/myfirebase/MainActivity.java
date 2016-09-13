@@ -2,6 +2,7 @@ package com.tes.vi.myfirebase;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -41,6 +42,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCancelled(FirebaseError firebaseError) {
                 mTxtCondition.setText("!!! " + firebaseError.toString());
+            }
+        });
+
+        mBtnSunny.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mRef.setValue("Sunny Gooo");
+            }
+        });
+
+        mBtnFoggy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mRef.setValue("F for foggy");
             }
         });
     }
