@@ -42,4 +42,10 @@
         android:layout_alignTop="@+id/btnSunny"
         android:layout_toRightOf="@+id/tvCondition"
         android:layout_toEndOf="@+id/tvCondition" />
+
+    <ListView
+        android:id="@+id/lvData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnFoggy"></ListView>
 </RelativeLayout>
